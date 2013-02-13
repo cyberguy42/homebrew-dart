@@ -10,7 +10,7 @@ class Fcl < Formula
 
   def install
     system "cmake -D FCL_USE_SSE:STRING=0 ."
-    system "make install" # if this fails, try separate make/make install steps
+    system "sudo make install" # if this fails, try separate make/make install steps
   end
 
   def test
