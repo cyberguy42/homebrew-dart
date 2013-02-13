@@ -9,7 +9,8 @@ class Fcl < Formula
   depends_on 'libccd' => :build
 
   def install
-    system "cmake", ".", "VAR:FCL_USE_SSE=0"
+    system "cmake", "-D FCL_USE_SSE:0"
+    system "cmake", ".", "*std_cmake_args"
     system "make install" # if this fails, try separate make/make install steps
   end
 
